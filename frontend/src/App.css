@@ -3,7 +3,7 @@ html{
     padding: 0;
 }
 .bgimage{
-    background-image:url('../src//backgroundimg.png');
+    background-image:url('../src/backgroundimg.png');
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
