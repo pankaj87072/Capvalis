@@ -3,7 +3,13 @@ html{
     padding: 0;
 }
 .bgimage{
-    background-image:url('../public/27105.jpg');
-    /* background: no-repeat,fixed,center; */
-    
+    background-image:url('../src/backgroundimg.png');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
 }
+@media(max-width: 600px) {
+    .bgimage{
+      background-image: none;
+    }
+  }
