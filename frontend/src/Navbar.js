@@ -15,6 +15,7 @@ const Navbar = () => {
         <div className='px-4 '>Home</div>
         <div className='px-4 hover:text-gray-300 cursor-pointer'>About</div>
         <div className='px-4 hover:text-gray-300 cursor-pointer'>Career</div>
+        <div className='px-4 hover:text-gray-300 cursor-pointer'>OurServices</div>
         <div className='px-4 hover:text-gray-300 cursor-pointer'>Login</div>
         <div className='px-4 hover:text-gray-300 cursor-pointer'>Register</div>
       </div>
