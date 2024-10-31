@@ -44,12 +44,12 @@ const OurServices = () => {
 
   const stats = [
     { icon: <Shield className="w-6 h-6" />, value: "99.9%", label: "Uptime" },
-    { icon: <Users className="w-6 h-6" />, value: "50K+", label: "Active Users" },
+    { icon: <Users className="w-6 h-6" />, value: "0K+", label: "Active Users" },
     { icon: <Award className="w-6 h-6" />, value: "90%", label: "Success Rate" }
   ];
 
   return (
-    <div className="min-h-[60vh] w-full bg-gradient-to-b from-gray-900 to-black p-6 overflow-hidden">
+    <div className="min-h-[60vh] w-full bg-black p-6 overflow-hidden">
       {/* Header Section */}
       <div className="max-w-7xl mx-auto mb-12 text-center">
         <h2 className="text-4xl font-bold text-white mb-4">

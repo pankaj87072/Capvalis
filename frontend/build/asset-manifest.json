@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.e931c666.css",
-    "main.js": "/static/js/main.748deaed.js",
-    "static/js/453.8ab44547.chunk.js": "/static/js/453.8ab44547.chunk.js",
-    "static/media/27105.jpg": "/static/media/27105.f2f6a92bf41c6561cc6f.jpg",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/static/css/main.0729b7ed.css",
+    "main.js": "/static/js/main.84b887bf.js",
+    "static/js/453.d855a71b.chunk.js": "/static/js/453.d855a71b.chunk.js",
+    "static/media/backgroundimg.png": "/static/media/backgroundimg.2a7fcae8e031378ba2a4.png",
+    "static/media/Capvalislogo2.jpg": "/static/media/Capvalislogo2.31ad0df9ff3025d02f36.jpg",
     "index.html": "/index.html",
-    "main.e931c666.css.map": "/static/css/main.e931c666.css.map",
-    "main.748deaed.js.map": "/static/js/main.748deaed.js.map",
-    "453.8ab44547.chunk.js.map": "/static/js/453.8ab44547.chunk.js.map"
+    "main.0729b7ed.css.map": "/static/css/main.0729b7ed.css.map",
+    "main.84b887bf.js.map": "/static/js/main.84b887bf.js.map",
+    "453.d855a71b.chunk.js.map": "/static/js/453.d855a71b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e931c666.css",
-    "static/js/main.748deaed.js"
+    "static/css/main.0729b7ed.css",
+    "static/js/main.84b887bf.js"
   ]
 }

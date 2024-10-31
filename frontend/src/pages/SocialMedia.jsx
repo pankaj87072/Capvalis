@@ -8,8 +8,8 @@ const SocialMedia = () => {
       icon: <Instagram className="w-12 h-12" />,
       color: 'from-pink-500 via-purple-500 to-indigo-500',
       handle: '@yourcompany',
-      followers: '10.5K',
-      engagement: '25%',
+      followers: '0K',
+      engagement: '0%',
       description: 'Follow us for daily market insights and trading tips'
     },
     {
@@ -17,15 +17,15 @@ const SocialMedia = () => {
       icon: <Send className="w-12 h-12" />,
       color: 'from-blue-400 via-blue-500 to-blue-600',
       handle: 't.me/yourcompany',
-      members: '5.2K',
-      activity: 'Very Active',
+      members: '0K',
+      activity: 'Inactive',
       description: 'Join our community for real-time market updates'
     },
     {
       name: 'WhatsApp',
       icon: <MessageCircle className="w-12 h-12" />,
       color: 'from-green-400 via-green-500 to-green-600',
-      handle: '+1 (234) 567-8900',
+      handle: '+91 2221221222',
       response: '< 30 mins',
       status: 'Online',
       description: 'Direct support and personalized trading assistance'
@@ -33,7 +33,7 @@ const SocialMedia = () => {
   ];
 
   return (
-    <div className="min-h-[60vh] w-full bg-gradient-to-b from-gray-900 to-black p-6">
+    <div className="min-h-[60vh] w-full bg-black p-6">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -44,15 +44,12 @@ const SocialMedia = () => {
             Stay updated with market trends, receive instant support, and join our growing community across all social platforms
           </p>
         </div>
-
-        {/* Social Media Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {socialPlatforms.map((platform) => (
             <div
               key={platform.name}
               className="relative group"
             >
-              {/* Card */}
               <div className="h-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 
                             transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl 
                             hover:shadow-blue-500/20">
@@ -89,21 +86,15 @@ const SocialMedia = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Description */}
                 <p className="text-gray-400 mb-6">
                   {platform.description}
                 </p>
-
-                {/* Action Button */}
                 <button className={`w-full py-3 px-4 rounded-lg font-medium transition-all duration-300
                                  bg-gradient-to-r ${platform.color} text-white
                                  hover:opacity-90 hover:shadow-lg`}>
                   {platform.name === 'WhatsApp' ? 'Message Us' : 
                    platform.name === 'Telegram' ? 'Join Channel' : 'Follow Us'}
                 </button>
-
-                {/* Status Indicator */}
                 {platform.name === 'WhatsApp' && platform.status === 'Online' && (
                   <div className="absolute top-6 right-6 flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
@@ -115,14 +106,13 @@ const SocialMedia = () => {
           ))}
         </div>
 
-        {/* Additional Features */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-gray-800/30 rounded-xl p-6 text-center">
             <div className="text-2xl font-bold text-white mb-2">24/7</div>
             <div className="text-gray-400">Support Available</div>
           </div>
           <div className="bg-gray-800/30 rounded-xl p-6 text-center">
-            <div className="text-2xl font-bold text-white mb-2">100K+</div>
+            <div className="text-2xl font-bold text-white mb-2">0K+</div>
             <div className="text-gray-400">Community Members</div>
           </div>
           <div className="bg-gray-800/30 rounded-xl p-6 text-center">
