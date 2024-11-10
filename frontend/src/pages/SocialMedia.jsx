@@ -1,16 +1,19 @@
 import React from 'react';
 import { Instagram, Send, MessageCircle } from 'lucide-react';
-
+import { LinkedIn } from '@mui/icons-material';
+import {redirect, useNavigate} from 'react-router-dom'
 const SocialMedia = () => {
   const socialPlatforms = [
     {
       name: 'Instagram',
       icon: <Instagram className="w-12 h-12" />,
       color: 'from-pink-500 via-purple-500 to-indigo-500',
-      handle: '@yourcompany',
+      handle: '@cap.valis',
+      status:'Online',
       followers: '0K',
       engagement: '0%',
-      description: 'Follow us for daily market insights and trading tips'
+      description: 'Follow us for daily market insights and trading tips',
+      link:'https://www.instagram.com/cap.valis/'
     },
     {
       name: 'Telegram',
@@ -22,15 +25,18 @@ const SocialMedia = () => {
       description: 'Join our community for real-time market updates'
     },
     {
-      name: 'WhatsApp',
-      icon: <MessageCircle className="w-12 h-12" />,
-      color: 'from-green-400 via-green-500 to-green-600',
-      handle: '+91 2221221222',
+      name: 'Linked In',
+      icon: <LinkedIn sx={{width:'50px',height:'50px'}} className="w-12 h-12" />,
+      color: 'from-blue-400 via-blue-500 to-blue-600',
+      handle: '@capvalisllp',
+    
       response: '< 30 mins',
       status: 'Online',
-      description: 'Direct support and personalized trading assistance'
+      description: 'Direct support and personalized trading assistance',
+      link:'https://www.linkedin.com/company/capvalisllp'
     }
   ];
+  
 
   return (
     <div className="min-h-[60vh] w-full bg-black p-6">
@@ -91,11 +97,11 @@ const SocialMedia = () => {
                 </p>
                 <button className={`w-full py-3 px-4 rounded-lg font-medium transition-all duration-300
                                  bg-gradient-to-r ${platform.color} text-white
-                                 hover:opacity-90 hover:shadow-lg`}>
+                                 hover:opacity-90 hover:shadow-lg`} onClick={()=>{window.location.href=platform.link;console.log("hii")}}>
                   {platform.name === 'WhatsApp' ? 'Message Us' : 
                    platform.name === 'Telegram' ? 'Join Channel' : 'Follow Us'}
                 </button>
-                {platform.name === 'WhatsApp' && platform.status === 'Online' && (
+                {platform.name === 'Instagram' && platform.status === 'Online' && (
                   <div className="absolute top-6 right-6 flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                     <span className="text-sm text-green-400">Online</span>

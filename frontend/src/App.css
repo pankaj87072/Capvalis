@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Velodrama&display=swap');
 html{
     margin: 0;
     padding: 0;
@@ -15,4 +16,7 @@ html{
   }
   .synesans{
   font-family: Syne;
+  }
+  .mainanimationtext{
+    font-family:Velodrama;
   }

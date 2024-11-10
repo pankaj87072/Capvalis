@@ -7,6 +7,7 @@ import OurPerformance from "./OurPerformance";
 import SocialMedia from "./SocialMedia";
 import OurServices from "./OurServices";
 // import { ChevronRight } from 'lucide-react';
+// import {Link} from 'react-scroll'
 
 const HomePage = () => {
     return (
@@ -20,8 +21,8 @@ const HomePage = () => {
             <div className="min-h-screen w-full bg-black text-white overflow-x-hidden">
                 <Navbar />
                 <main className="w-full px-8">
-                    {/* Hero Section */}
-                    <article className="bgimage relative min-h-[90vh] flex w-full items-center px-8 py-12 sm:py-16 lg:py-20 border-b border-cyan-200">
+                    {/* main Section */}
+                    <article id="mainhomepage" className="bgimage relative min-h-[90vh] flex w-full items-center px-8 py-12 sm:py-16 lg:py-20 border-b border-cyan-200">
                         <section className="relative w-full mx-auto ">
                             <div className="w-full">
                                 <div className="inline-block mb-4 px-4 py-2 bg-blue-500/10 rounded-full">
@@ -52,17 +53,19 @@ const HomePage = () => {
                     </article>
 
                     {/* About Section */}
-                    <article className="py-2 sm:py-6 w-full border-b border-cyan-200">
-                        <About />
+                    <article id="about" className="py-2 sm:py-6 w-full border-b border-cyan-200">
+                      <About />
                     </article>
-
+                    <article id="about" className="py-2 sm:py-6 w-full border-b border-cyan-200">
+                      <OurPerformance />
+                    </article>
                     {/* OurServices Section */}
-                    <article className="py-2 sm:py-6 w-full border-b border-cyan-200">
+                    <article id="ourservices" className="py-2 sm:py-6 w-full border-b border-cyan-200">
                         <OurServices/>
                     </article>
 
                     {/* SocialMedia Section */}
-                    <article className="py-2 sm:py-6 w-full border-b border-cyan-200">
+                    <article id="socialmedia" className="py-2 sm:py-6 w-full border-b border-cyan-200">
                         <SocialMedia/>
                     </article>
                 </main>

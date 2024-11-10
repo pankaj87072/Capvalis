@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.97cc16d2.css",
+    "main.js": "/static/js/main.ec124875.js",
+    "static/js/453.8ab44547.chunk.js": "/static/js/453.8ab44547.chunk.js",
+    "static/media/backgroundimg.png": "/static/media/backgroundimg.2a7fcae8e031378ba2a4.png",
+    "static/media/Capvalislogo2.jpg": "/static/media/Capvalislogo2.31ad0df9ff3025d02f36.jpg",
+    "static/media/abstract-textured-backgound_1258-30471.avif": "/static/media/abstract-textured-backgound_1258-30471.ece87bdac21b6ed15ad3.avif",
+    "index.html": "/index.html",
+    "main.97cc16d2.css.map": "/static/css/main.97cc16d2.css.map",
+    "main.ec124875.js.map": "/static/js/main.ec124875.js.map",
+    "453.8ab44547.chunk.js.map": "/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.97cc16d2.css",
+    "static/js/main.ec124875.js"
+  ]
+}

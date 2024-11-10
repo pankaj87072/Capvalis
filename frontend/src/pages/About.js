@@ -71,7 +71,7 @@ const About = () => {
     ];
 
     return (
-        <div className="bg-black text-white">
+        <div  className=" bg-black text-white">
             {/* Hero Section */}
             <section className="relative py-5 flex flex-col items-center justify-center overflow-hidden bg-black">
                 <div 

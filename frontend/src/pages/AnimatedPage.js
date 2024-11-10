@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import backgroundImage from '../abstract-textured-backgound_1258-30471.avif';
+import '../App.css'
+// import backgroundImage from '../abstract-textured-backgound_1258-30471.avif';
 
 const AnimatedLogo = () => {
   const [isFirstAnimationComplete, setIsFirstAnimationComplete] = useState(false);
@@ -42,11 +43,10 @@ const AnimatedLogo = () => {
               scale: { times: [0, 0.8, 1], duration: 1.25 }
             }}
             onAnimationComplete={() => setIsFirstAnimationComplete(true)}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-blue-700  md:left-[-15%] lg:left-[-10%]"
+            className="mainanimationtext text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-blue-700  md:left-[-15%] lg:left-[-10%]"
             style={{
               fontWeight: 'bold',
-              fontFamily: '-moz-initial',
-              filter: 'drop-shadow(0 0 15px rgba(29, 78, 216, 0.5))',
+              // filter: 'drop-shadow(0 0 15px rgba(29, 78, 216, 0.5))',
               position: 'relative',
               
             }}
@@ -57,11 +57,10 @@ const AnimatedLogo = () => {
             variants={containerVariants}
             initial="hidden"
             animate={isFirstAnimationComplete ? "visible" : "hidden"}
-            className="flex absolute text-white top-1/2 transform -translate-y-1/2 sm:left-[60%] md:left-[35%] lg:left-[30%] hover:cursor-pointer" // Center "APVALIS" relative to "C"
+            className="mainanimationtext flex absolute text-white top-1/2 transform -translate-y-1/2 sm:left-[60%] md:left-[35%] lg:left-[30%] hover:cursor-pointer" // Center "APVALIS" relative to "C"
             style={{
               fontWeight: 'bold',
-              fontFamily: '-moz-initial',
-              filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.3))'
+              // filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.3))'
             }}
           >
             {letters.map((letter, index) => (
