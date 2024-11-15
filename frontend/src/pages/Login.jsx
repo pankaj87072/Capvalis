@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import {useFirebase} from '../context/Firebase'
+import { useFirebase } from '../context/Firebase';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-// import {uid}
 import {
     Container,
     Paper,
@@ -23,77 +22,111 @@ import {
 } from '@mui/icons-material';
 
 const Login = () => {
-
     const firebase = useFirebase();
-    // console.log(firebase);
+    const navigate = useNavigate();
+    
     const [isLogin, setIsLogin] = useState(true);
     const [showPassword, setShowPassword] = useState(false);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
-    // const [isLoginSuccess,setIsLoginSucess]=useState(false);
+    const [referralData, setReferralData] = useState(null);
+    const [referralError, setReferralError] = useState('');
+    const [allok,setAllok]=useState(false);
     const [formData, setFormData] = useState({
+        name: '',
         email: '',
         password: '',
         confirmPassword: '',
-        Referral:''
+        referralCode: ''
     });
-    const navigate=useNavigate();
-const handlereferraluniqueid=()=>{
-    const newuniqueid=uuidv4();
-      console.log(newuniqueid);
-}
-    // console.log(formData);
-//     const [users,setUsers]=useState(null);
-//   useEffect((user)=>{
-//   firebase.keeploggedin(user)
-//   },[])
-// const handlereturningtohomepageafterlogin=()=>{
-//     {isLoginSuccess? navigate('/home') : navigate('/Login')}
-// }
-// handlereturningtohomepageafterlogin();
+    const handleReferralUniqueid = () => {
+        const newuniqueid = uuidv4().substring(0, 5);
+        console.log(newuniqueid);
+        setReferralData(newuniqueid);
+        console.log(referralData);
+        setAllok(true);
+    };
+
+    const validateReferralCode = async () => {
+        if (!formData.referralCode) return true; 
+        const isValid = await firebase.validateReferralCode(formData.referralCode);
+        if (!isValid) {
+            setReferralError('Invalid referral code');
+            return false;
+        }
+        setReferralError('');
+        return true;
+    };
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
         setLoading(true);
 
-        // Basic validation
-        if (!formData.email || !formData.password) {
-            setError('Please fill in all fields');
-            setLoading(false);
-            return;
-        }
+        try {
+            // Basic validation
+            if (!formData.email || !formData.password) {
+                throw new Error('Please fill in all fields');
+            }
 
-        if (!isLogin && formData.password !== formData.confirmPassword) {
-            setError('Passwords do not match');
-            setLoading(false);
-            return;
-        }
+            if (!isLogin) {
+                if (formData.password !== formData.confirmPassword) {
+                    throw new Error('Passwords do not match');
+                }
 
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(formData.email)) {
-            setError('Please enter a valid email address');
-            setLoading(false);
-            return;
-        }
+                if (formData.password.length < 8) {
+                    throw new Error('Password must be at least 8 characters long');
+                }
 
-        // Password validation for registration
-        if (!isLogin && formData.password.length < 8) {
-            setError('Password must be at least 8 characters long');
-            setLoading(false);
-            return;
-        }
+                // Validate referral code if provided
+                const isValidReferral = await validateReferralCode();
+                if (!isValidReferral) {
+                    throw new Error('Invalid referral code');
+                }
+            }
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        setLoading(false);
-        // Here you would typically make your actual API call
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.email)) {
+                throw new Error('Please enter a valid email address');
+            }
+            if (isLogin) {
+                // Handle login
+                await firebase.siginwithfirebase(formData.email, formData.password);
+                firebase.checkloginornot(true);
+                navigate('/');
+            }else{
+                // Handle registration
+                if(allok){
+                const userCredential = await firebase.registerwithfirebase(formData.email, formData.password);
+                // Store user details with referral information
+                await firebase.handleFirebaseStoreStorage(
+                    formData.names,
+                    formData.email,
+                    referralData,
+                    formData.referralCode || null
+                );
+                console.log("succesful");
+                // firebase.checkloginornot(true);
+                // navigate('/');
+            }else{
+                console.log('try again any error occured');
+            }
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            setError(error.message);
+            firebase.checkloginornot(false);
+        } finally {
+            setLoading(false);
+        }
     };
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
+        if (e.target.name === 'referralCode') {
+            setReferralError('');
+        }
     };
-
     return (
         <div className='h-screen w-full flex justify-center items-center bg-black'>
         <Container className='border-x-slate-200'  component="main" maxWidth="xs">
@@ -122,6 +155,26 @@ const handlereferraluniqueid=()=>{
                     )}
 
                     <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
+                    {!isLogin && (
+                            <TextField
+                                margin="normal"
+                                required
+                                fullWidth
+                                name="names"
+                                label="name"
+                                type="text"
+                                id="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                InputProps={{
+                                    startAdornment: (
+                                        <InputAdornment position="start">
+                                            <Lock />
+                                        </InputAdornment>
+                                    ),
+                                }}
+                            />
+                        )}
                         <TextField
                             margin="normal"
                             required
@@ -191,26 +244,26 @@ const handlereferraluniqueid=()=>{
                                 }}
                             />
                         )}
-                        {!isLogin  &&  (
-                            <TextField
-                                margin="normal"
-                                required
-                                fullWidth
-                                name="Referral "
-                                label="Referral"
-                                type="text"
-                                id="Referral"
-                                value={formData.Referral}
-                                // onChange={handleChange}
-                                InputProps={{
-                                    startAdornment: (
-                                        <InputAdornment position="start">
-                                            <Lock />
-                                        </InputAdornment>
-                                    ),
-                                }}
-                            />
-                        )}
+                       {!isLogin && (
+                        <TextField
+                            margin="normal"
+                            fullWidth
+                            name="referralCode"
+                            label="Referral Code (Optional)"
+                            type="text"
+                            value={formData.referralCode}
+                            onChange={handleChange}
+                            error={!!referralError}
+                            helperText={referralError}
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <Lock />
+                                    </InputAdornment>
+                                ),
+                            }}
+                        />
+                    )}
 
                         <Button
                             type="submit"
@@ -218,9 +271,10 @@ const handlereferraluniqueid=()=>{
                             variant="contained"
                             sx={{ mt: 3, mb: 2 }}
                             disabled={loading}
-                            onClick={isLogin?()=>{firebase.siginwithfirebase(formData.email,formData.password).then(()=>{
-                                console.log("login successful");firebase.checkloginornot(true);navigate('/')}).catch((err)=>{firebase.checkloginornot(false);console.log("Error: "+err)})}:()=> {firebase.registerwithfirebase(formData.email,formData.password);
-                                console.log(formData.email,formData.password,formData.confirmPassword)}}
+                            onClick={handleReferralUniqueid}
+                            // onClick={isLogin?()=>{firebase.siginwithfirebase(formData.email,formData.password).then(()=>{
+                            //     console.log("login successful");firebase.checkloginornot(true);navigate('/')}).catch((err)=>{firebase.checkloginornot(false);console.log("Error: "+err)})}:()=> {firebase.registerwithfirebase(formData.email,formData.password).then(()=>{firebase.handleFirebaseStoreStorage(formData.names,formData.email,referralData);});
+                            //     console.log(formData.email,formData.password,formData.confirmPassword)}}
                         >
                             {loading ? (
                                 <CircularProgress size={24} color="inherit" />
@@ -241,7 +295,6 @@ const handlereferraluniqueid=()=>{
                                 ? "Don't have an account? Register"
                                 : "Already have an account? Login"}
                         </Button>
-                        <Button onClick={handlereferraluniqueid}>Click Me</Button>
                     </Box>
                 </Paper>
             </Box>

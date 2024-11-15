@@ -1,7 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Velodrama&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');
 html{
     margin: 0;
     padding: 0;
+}
+.mainanimationtext {
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom bg-gradient-radial utility if not using Tailwind's built-in radial gradients */
+.bg-gradient-radial {
+  background-image: radial-gradient(circle at center, var(--tw-gradient-from) 0%, var(--tw-gradient-via) 50%, var(--tw-gradient-to) 100%);
 }
 .bgimage{
     background-image:url('../src/backgroundimg.png');

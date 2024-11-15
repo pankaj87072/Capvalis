@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import '../App.css'
-// import backgroundImage from '../abstract-textured-backgound_1258-30471.avif';
+import '../App.css';
 
 const AnimatedLogo = () => {
   const [isFirstAnimationComplete, setIsFirstAnimationComplete] = useState(false);
@@ -18,11 +17,16 @@ const AnimatedLogo = () => {
     visible: { opacity: 1, transition: { staggerChildren: 0.12, delayChildren: 1.75 } }
   };
 
+  // Calculate dynamic position for 'C' based on screen size
+  const getCPosition = () => {
+    return {
+      scale: [0.5, 2.5, 2.5],
+      x: isFirstAnimationComplete ? [0, '-12vw'] : 0
+    };
+  };
+
   return (
-    <div
-      className="relative h-screen w-screen flex justify-center items-center overflow-hidden  bg-black"
-      // style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
+    <div className="relative h-screen w-screen flex justify-center items-center overflow-hidden bg-black">
       <div className="absolute inset-0 bg-black opacity-30" />
       
       <div className="relative z-10 w-full max-w-6xl mx-auto px-4 flex justify-center items-center">
@@ -31,9 +35,8 @@ const AnimatedLogo = () => {
             initial={{ opacity: 0, scale: 0.5, rotateY: -180 }}
             animate={{ 
               opacity: 1, 
-              scale: [0.5, 2.5, 2.5],
-              rotateY: 0,
-              x: isFirstAnimationComplete ? '-12vw' : 0
+              ...getCPosition(),
+              rotateY: 0
             }}
             transition={{ 
               duration: 1.25, 
@@ -43,12 +46,13 @@ const AnimatedLogo = () => {
               scale: { times: [0, 0.8, 1], duration: 1.25 }
             }}
             onAnimationComplete={() => setIsFirstAnimationComplete(true)}
-            className="mainanimationtext text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-blue-700  md:left-[-15%] lg:left-[-10%]"
+            className="mainanimationtext font-extrabold text-blue-700"
             style={{
-              fontWeight: 'bold',
-              // filter: 'drop-shadow(0 0 15px rgba(29, 78, 216, 0.5))',
+              fontFamily: "'Montserrat', sans-serif",
               position: 'relative',
-              
+              fontSize: 'clamp(2rem, 8vw, 8rem)',
+              transform: 'translateX(-50%)',
+              marginRight: 'clamp(1rem, 3vw, 3rem)'
             }}
           >
             C
@@ -57,19 +61,26 @@ const AnimatedLogo = () => {
             variants={containerVariants}
             initial="hidden"
             animate={isFirstAnimationComplete ? "visible" : "hidden"}
-            className="mainanimationtext flex absolute text-white top-1/2 transform -translate-y-1/2 sm:left-[60%] md:left-[35%] lg:left-[30%] hover:cursor-pointer" // Center "APVALIS" relative to "C"
+            className="mainanimationtext flex absolute text-white hover:cursor-pointer"
             style={{
-              fontWeight: 'bold',
-              // filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.3))'
+              fontFamily: "'Montserrat', sans-serif",
+              fontWeight: 800,
+              position: 'absolute',
+              left: '50%',
+              top: '50%',
+              transform: 'translate(-50%, -50%)',
+              marginLeft: 'clamp(2rem, 6vw, 6rem)'
             }}
           >
             {letters.map((letter, index) => (
               <motion.span
                 key={index}
                 variants={letterVariants}
-                className="inline-block text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
+                className="inline-block"
                 style={{
-                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)'
+                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)',
+                  fontSize: 'clamp(3rem, 8vw, 8rem)',
+                  marginLeft: 'clamp(0.1rem, 0.3vw, 0.3rem)'
                 }}
                 whileHover={{ 
                   scale: 1.1, 

@@ -6,7 +6,7 @@ const Transaction = () => {
 
   const handlePayment = () => {
     const options = {
-      key: "",
+      key: "rzp_test_hVoOPH9C59O9xF",
       amount: 50000, // Amount in paise
       currency: "INR",
       name: "Test Company",
