@@ -19,7 +19,7 @@ function App() {
     }, 7000);
 
     return () => clearTimeout(timer); // Cleanup timeout on component unmount
-  }, []);
+  }, [isAnimation]);
 
   return (
     <BrowserRouter>

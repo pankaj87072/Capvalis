@@ -4,12 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { FireBaseProvider } from './context/Firebase'; 
+// import AnimatedPage from './pages/AnimatedPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <FireBaseProvider value>
       <App />
+      {/* <AnimatedPage/> */}
     </FireBaseProvider>
   </React.StrictMode>
 

@@ -152,14 +152,14 @@ const Plans = () => {
                 <span className="text-gray-400 ml-1">{plan.period}</span>
               </div>
 
-              <ul className="space-y-3 mb-6">
+              {/* <ul className="space-y-3 mb-6">
                 {plan.features.map((feature, index) => (
                   <li key={index} className="flex items-center text-gray-300">
                     <CheckCircle className="w-4 h-4 mr-2 text-blue-500" />
                     {feature}
                   </li>
                 ))}
-              </ul>
+              </ul> */}
 
               <button
                 className={`w-full py-3 px-4 rounded-lg font-medium

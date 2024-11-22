@@ -22,10 +22,11 @@ const OurServices = () => {
       title: "Trading View Indicator",
       description: "Advanced technical and fundamental analysis of global markets",
       features: [
-        "Real-time market insights",
-        "Technical analysis tools",
-        "Market sentiment indicators",
-        "Economic calendar"
+        "Access Capvalis Premium Indicator with non-lagging performance",
+        "Potential for 655% growth with advanced insights.",
+        "Provides real-time market data and sentiment indicators.",
+         "Includes technical analysis tools for informed trading.",
+        "Economic calendar to stay updated on market events"
       ],
       color: "from-blue-500 to-indigo-600"
     },
@@ -35,10 +36,11 @@ const OurServices = () => {
       title: "WhatsApp",
       description: "Premium trading signals with high accuracy rates",
       features: [
-        "24/7 signal alerts",
-        "Multi-market coverage",
-        "Risk management advice",
-        "Entry/Exit points"
+        "Daily stock Analysis: Bullish and bearish movements for the next day",
+        "Algorithm-based alerts for accuracy and reliability",
+        "24/7 signal updates and multi-market coverage.",
+        "Risk management guidance to optimize trades.",
+        "Expert insights and trading strategies to stay ahead in the market."
       ],
       color: "from-green-500 to-emerald-600"
     },
@@ -48,10 +50,11 @@ const OurServices = () => {
       title: "Coming Soon...",
       description: "Premium trading signals with high accuracy rates",
       features: [
-        "24/7 signal alerts",
-        "Multi-market coverage",
-        "Risk management advice",
-        "Entry/Exit points"
+        "Guaranteed results with a 2x refund if we can’t make you profitable",
+        "100% compensation for any losses incurred using our taught strategies",
+        "Personalized guidance to help you master profitable trading techniques",
+        "Structured program designed for consistent growth and learning",
+        "Risk-free mentorship to build confidence and skills in trading"
       ],
       color: "from-green-500 to-emerald-600"
     }
@@ -129,7 +132,7 @@ const OurServices = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="max-w-7xl mx-auto">
+      {/* <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {stats.map((stat, index) => (
             <div key={index} className="bg-gray-800/30 rounded-xl p-6">
@@ -145,11 +148,11 @@ const OurServices = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Background Elements */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-3xl -z-10" />
-      <div className="absolute top-1/2 right-1/4 w-[300px] h-[300px] bg-purple-500/20 rounded-full blur-3xl -z-10" />
+      {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-1/2 right-1/4 w-[300px] h-[300px] bg-purple-500/20 rounded-full blur-3xl -z-10" /> */}
     </div>
   );
 };
