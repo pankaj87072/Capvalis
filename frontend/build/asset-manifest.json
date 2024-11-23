@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4b9f5c21.css",
-    "main.js": "/static/js/main.731a8712.js",
+    "main.css": "/static/css/main.48a0c62f.css",
+    "main.js": "/static/js/main.f341ec8a.js",
     "static/js/453.8ab44547.chunk.js": "/static/js/453.8ab44547.chunk.js",
     "static/media/backgroundimg.png": "/static/media/backgroundimg.2a7fcae8e031378ba2a4.png",
     "static/media/g3.png": "/static/media/g3.adeb812c8305d6c58500.png",
@@ -9,12 +9,12 @@
     "static/media/g1.png": "/static/media/g1.83aa6363623b3ab5122a.png",
     "static/media/Capvalislogo2.jpg": "/static/media/Capvalislogo2.31ad0df9ff3025d02f36.jpg",
     "index.html": "/index.html",
-    "main.4b9f5c21.css.map": "/static/css/main.4b9f5c21.css.map",
-    "main.731a8712.js.map": "/static/js/main.731a8712.js.map",
+    "main.48a0c62f.css.map": "/static/css/main.48a0c62f.css.map",
+    "main.f341ec8a.js.map": "/static/js/main.f341ec8a.js.map",
     "453.8ab44547.chunk.js.map": "/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b9f5c21.css",
-    "static/js/main.731a8712.js"
+    "static/css/main.48a0c62f.css",
+    "static/js/main.f341ec8a.js"
   ]
 }
