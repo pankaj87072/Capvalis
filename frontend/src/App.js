@@ -11,7 +11,8 @@ import Plans from './pages/Plans';
 import Checkout from './pages/CheckoutPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import RefundPolicy from './pages/RefundPolicy';
-import TermsandCondtion from './pages/TermsandConditon'
+// import TermsandConditions from './pages/TermsandCondition';
+import TermsandCondition from './pages/TermsandCondition';
 
 function App() {
   const [isAnimation, setIsAnimation] = useState(true);
@@ -37,7 +38,7 @@ function App() {
               <Route path="/Career" element={<Career/>}/>
               <Route path="/Plans" element={<Plans/>}/>
               <Route path="/Checkout" element={<Checkout/>}/>
-              <Route path="/TermsandConditon" element={<TermsandCondtion/> }/>
+              <Route path="/TermsandCondition" element={<TermsandCondition/> }/>
               <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>}/>
               <Route path="/RefundPolicy" element={<RefundPolicy/>}/>
             </Routes>

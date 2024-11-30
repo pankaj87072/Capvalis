@@ -81,7 +81,7 @@ const HomePage = () => {
                 </p>
                 <div className="grid grid-2 text-center w-[50%]  self-center">
                 <a 
-                    href="/TermsandConditon" 
+                    href="/TermsandCondition" 
                     className="inline-block bg-blue-600 hover:bg-blue-500 m-1 text-white px-3 py-1 rounded-md text-sm transition-colors duration-300"
                 >
                     Terms&Conditions
@@ -105,7 +105,7 @@ const HomePage = () => {
                 <div className="space-y-2 text-gray-300 text-sm">
                     <p><span className="font-semibold">ABHIV CONSULTANCY LLP</span></p>
                     <p>📍 2-A, Shankar Purwa, Kalyanpur, Bahadurpur, Lucknow</p>
-                    <p>📞 <a href="tel:+919266971199" className="hover:text-green-400">+91 9266971199</a></p>
+                    <p>📞 <div href="tel:+919266971199" className="hover:text-green-400">+91 9266971199</div></p>
                     <p>✉️ <a href="mailto:capvalis.work@gmail.com" className="hover:text-blue-400">capvalis.work@gmail.com</a></p>
                 </div>
             </div>
