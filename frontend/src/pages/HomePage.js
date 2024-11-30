@@ -71,24 +71,47 @@ const HomePage = () => {
                         <SocialMedia/>
                     </article>
                 </main>
-                <footer className="flex justify-center items-center py-8 bg-black">
-    <div className="bg-gray-800/50 shadow-lg border border-gray-700/50 border-gray h-[14rem] w-[60%] rounded-lg flex flex-col justify-center items-center text-center p-6">
-        <div className="text-white mb-4">
-            <h3 className="text-xl font-bold mb-2">Terms and Conditions</h3>
-            <p className="text-gray-300 text-sm mb-4">
-                By using our platform, you agree to our terms of service and privacy policy.
-            </p>
-            <a 
-                href="/terms-and-conditions" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-blue-500 hover:text-blue-400 underline transition-colors duration-300"
-            >
-                Read Full Terms and Conditions
-            </a>
+                <footer className="bg-black py-8 px-4">
+    <div className="max-w-2xl mx-auto bg-gray-800/60 rounded-lg p-6 border border-gray-700/50 shadow-lg text-white">
+        <div className="grid md:grid-cols-2 gap-4">
+            <div>
+                <h3 className="text-2xl font-bold mb-3 text-blue-400">Terms & Conditions</h3>
+                <p className="text-gray-300 mb-4 text-sm">
+                    By accessing our platform, you agree to our comprehensive terms of service.
+                </p>
+                <div className="grid grid-2 text-center w-[50%]  self-center">
+                <a 
+                    href="/Terms&Conditions" 
+                    className="inline-block bg-blue-600 hover:bg-blue-500 m-1 text-white px-3 py-1 rounded-md text-sm transition-colors duration-300"
+                >
+                    Terms&Conditions
+                </a>
+                <a 
+                    href="/PrivacyPolicy" 
+                    className="inline-block bg-blue-600 hover:bg-blue-500 m-1 text-white px-3 py-1 rounded-md text-sm transition-colors duration-300"
+                >
+                  PrivacyPolicy
+                </a>
+                <a 
+                    href="/RefundPolicy" 
+                    className="inline-block bg-blue-600 hover:bg-blue-500 m-1 text-white px-3 py-1 rounded-md text-sm transition-colors duration-300"
+                >
+                   RefundPolicy
+                </a>
+                </div>
+            </div>
+            <div>
+                <h3 className="text-2xl font-bold mb-3 text-green-400">Contact Us</h3>
+                <div className="space-y-2 text-gray-300 text-sm">
+                    <p><span className="font-semibold">ABHIV CONSULTANCY LLP</span></p>
+                    <p>📍 2-A, Shankar Purwa, Kalyanpur, Bahadurpur, Lucknow</p>
+                    <p>📞 <a href="tel:+919266971199" className="hover:text-green-400">+91 9266971199</a></p>
+                    <p>✉️ <a href="mailto:capvalis.work@gmail.com" className="hover:text-blue-400">capvalis.work@gmail.com</a></p>
+                </div>
+            </div>
         </div>
-        <div className="text-gray-500 text-xs">
-            © 2024 Capvalis. All Rights Reserved.
+        <div className="text-center text-gray-500 text-xs mt-4 border-t border-gray-700/50 pt-3">
+            © 2024 Capvalis. All Rights Reserved | Last Updated: 30-11-2024
         </div>
     </div>
 </footer>

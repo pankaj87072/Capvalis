@@ -9,6 +9,8 @@ import Transaction from './pages/Transaction';
 import Career from './pages/Career';
 import Plans from './pages/Plans';
 import Checkout from './pages/CheckoutPage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import RefundPolicy from './pages/RefundPolicy';
 
 function App() {
   const [isAnimation, setIsAnimation] = useState(true);
@@ -24,9 +26,9 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        {isAnimation ? (
+        {/* {isAnimation ? (
           <AnimatedPage />
-        ) : (
+        ) : ( */}
           <HelmetProvider>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -34,10 +36,13 @@ function App() {
               <Route path="/Career" element={<Career/>}/>
               <Route path="/Plans" element={<Plans/>}/>
               <Route path="/Checkout" element={<Checkout/>}/>
+              <Route path="/Terms&Conditons" element={<Checkout/>}/>
+              <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>}/>
+              <Route path="/RefundPolicy" element={<RefundPolicy/>}/>
             </Routes>
             
           </HelmetProvider>
-        )}
+        {/* )} */}
       </div>
     </BrowserRouter>
     // <Transaction/>
