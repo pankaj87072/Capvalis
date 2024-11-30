@@ -81,7 +81,7 @@ const HomePage = () => {
                 </p>
                 <div className="grid grid-2 text-center w-[50%]  self-center">
                 <a 
-                    href="/Terms&Conditions" 
+                    href="/TermsandConditon" 
                     className="inline-block bg-blue-600 hover:bg-blue-500 m-1 text-white px-3 py-1 rounded-md text-sm transition-colors duration-300"
                 >
                     Terms&Conditions

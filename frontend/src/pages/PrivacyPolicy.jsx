@@ -5,7 +5,7 @@ const PrivacyPolicy = () => {
     <div className="bg-gray-900 min-h-screen text-white py-12 px-4">
       <div className="max-w-4xl mx-auto bg-gray-800/60 rounded-lg p-8 border border-gray-700/50 shadow-lg">
         <h1 className="text-3xl font-bold mb-6 text-blue-400 border-b border-gray-700 pb-4">
-          Privacy Policy
+         Capvalis Privacy Policy
         </h1>
         
         <p className="text-gray-300 mb-6">
