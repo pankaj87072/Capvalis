@@ -100,7 +100,7 @@ const Plans = () => {
     }
   ];
 
-  const decideplans = servicetitle === 'Trading View Indicator' 
+  const decideplans = servicetitle === 'Algo Trading Course' 
     ? plansforalgo 
     : servicetitle === 'WhatsApp' 
       ? plansforwhatsapp 

@@ -59,12 +59,11 @@ const Checkout = () => {
 
   const handlePayment = async () => {
     if (!validateForm()) return;
-
     const options = {
       key: process.env.REACT_APP_RAZORPAY_KEY_ID,
       amount: amount,
       currency: "INR",
-      name: "Your Company Name",
+      name: "Capvalis",
       description: `${planTitle} Plan Subscription`,
       order_id: "",
       handler: (response) => {

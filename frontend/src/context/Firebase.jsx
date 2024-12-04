@@ -4,6 +4,9 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, on
 import { getDatabase, set, ref, get, update } from 'firebase/database';
 import { getDocs, getFirestore } from 'firebase/firestore';
 import { collection, addDoc, doc, getDoc, updateDoc, query, where } from "firebase/firestore";
+import { getAnalytics } from "firebase/analytics";
+import { setAnalyticsCollectionEnabled } from "firebase/analytics";
+
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_ApiKey,
@@ -20,9 +23,9 @@ const firebaseapp = initializeApp(firebaseConfig);
 const firebaseRegisterauth = getAuth(firebaseapp);
 const firebasedatabase = getDatabase(firebaseapp);
 const firebasestore = getFirestore(firebaseapp);
-
+const analytics = getAnalytics(firebaseapp);
 const FirebaseContext = createContext(null);
-
+setAnalyticsCollectionEnabled(analytics, true);
 export default FirebaseContext;
 export const useFirebase = () => useContext(FirebaseContext);
 

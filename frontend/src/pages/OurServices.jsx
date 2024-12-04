@@ -19,35 +19,35 @@ const OurServices = () => {
     {
       id: 1,
       icon: <LineChart className="w-6 h-6" />,
-      title: "Trading View Indicator",
+      title: "Algo Trading Course",
       description: "Advanced technical and fundamental analysis of global markets",
       features: [
         "Access Capvalis Premium Indicator with non-lagging performance",
-        "Potential for 655% growth with advanced insights.",
-        "Provides real-time market data and sentiment indicators.",
+        "Potential for 655% growth with advanced insights.       ",
+        "Provides real-time market data and sentiment indicators.       ",
          "Includes technical analysis tools for informed trading.",
-        "Economic calendar to stay updated on market events"
+        "Economic calendar to stay updated on market events",
       ],
       color: "from-blue-500 to-indigo-600"
     },
+    // {
+    //   id: 2,
+    //   icon: <TrendingUp className="w-6 h-6" />,
+    //   title: "WhatsApp",
+    //   description: "Premium trading signals with high accuracy rates",
+    //   features: [
+    //     "Daily stock Analysis: Bullish and bearish movements for the next day",
+    //     "Algorithm-based alerts for accuracy and reliability",
+    //     "24/7 signal updates and multi-market coverage.",
+    //     "Risk management guidance to optimize trades.",
+    //     "Expert insights and trading strategies to stay ahead in the market."
+    //   ],
+    //   color: "from-green-500 to-emerald-600"
+    // },
     {
       id: 2,
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "WhatsApp",
-      description: "Premium trading signals with high accuracy rates",
-      features: [
-        "Daily stock Analysis: Bullish and bearish movements for the next day",
-        "Algorithm-based alerts for accuracy and reliability",
-        "24/7 signal updates and multi-market coverage.",
-        "Risk management guidance to optimize trades.",
-        "Expert insights and trading strategies to stay ahead in the market."
-      ],
-      color: "from-green-500 to-emerald-600"
-    },
-    {
-      id: 3,
       icon: <BookOpen className="w-6 h-6" />,
-      title: "Coming Soon...",
+      title: "Courses",
       description: "Premium trading signals with high accuracy rates",
       features: [
         "Guaranteed results with a 2x refund if we can’t make you profitable",
@@ -78,7 +78,7 @@ const OurServices = () => {
       {/* Header Section */}
       <div className="max-w-7xl mx-auto mb-12 text-center">
         <h2 className="text-4xl font-bold text-white mb-4">
-          Our Services
+          Our Courses
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto">
           Comprehensive trading solutions designed to enhance your trading experience and maximize your potential
@@ -86,7 +86,7 @@ const OurServices = () => {
       </div>
 
       {/* Services Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-evenly gap-4 mb-12">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-evenly gap-4 mb-12">
         {services.map((service) => (
           <div
             key={service.id}
