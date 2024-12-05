@@ -16,10 +16,10 @@ const Plans = () => {
       period: '/month',
       color: 'from-blue-500 to-blue-600',
       features: [
-        'Basic features access',
-        'Email support',
-        'Up to 10 users',
-        '2GB storage'
+        'Access to foundational algorithmic trading modules',
+        'Introduction to market analysis techniques',
+        'Basic email support',
+        'Participation in live Q&A sessions'
       ],
       amount: 1500
     },
@@ -30,10 +30,10 @@ const Plans = () => {
       period: '/quarter',
       color: 'from-indigo-500 to-indigo-600',
       features: [
-        'All Monthly features',
-        'Priority support',
-        'Up to 50 users',
-        '10GB storage'
+        'Includes all Monthly features',
+        'Intermediate trading strategies with practical examples',
+        'Priority email and chat support',
+        'Access to recorded webinars and exclusive trading resources'
       ],
       amount: 3000,
       popular: true
@@ -45,10 +45,11 @@ const Plans = () => {
       period: '/year',
       color: 'from-purple-500 to-purple-600',
       features: [
-        'All Quarterly features',
-        '24/7 support',
-        'Unlimited users',
-        '100GB storage'
+        'Includes all Quarterly features',
+        'Advanced algorithmic trading strategies and case studies',
+        '24/7 dedicated support',
+        'One-on-one mentoring sessions with experts',
+        'Access to premium trading simulations and tools'
       ],
       amount: 10000
     }
@@ -57,46 +58,47 @@ const Plans = () => {
   const plansforCourses = [
     {
       id: 1,
-      title: 'Monthly',
-      price: '₹600',
+      title: 'Silver',
+      price: '₹10',
       period: '/month',
       color: 'from-green-500 to-green-600',
       features: [
-        'Basic features access',
-        'Email support',
-        'Up to 10 users',
-        '2GB storage'
+        'Trading From Scratch(Equity)',
+        'Basic Price Action & Candle Sticks',
+         'Stock Selection Technique',
       ],
-      amount: 600
+      amount: 10
     },
     {
       id: 2,
-      title: 'Quarterly',
-      price: '₹1,400',
+      title: 'Gold',
+      price: '₹9,700',
       period: '/quarter',
       color: 'from-emerald-500 to-emerald-600',
       features: [
-        'All Monthly features',
-        'Priority support',
-        'Up to 50 users',
-        '10GB storage'
+        'Introduction To FNO',
+        'Advanced Price Action',
+        'Advanced Stock Selection Technique',
+        'Advanced Candle Stick',
+        'Risk Management',
+        '30% Loss Compensation'
       ],
-      amount: 1400,
+      amount: 9700,
       popular: true
     },
     {
       id: 3,
-      title: 'Yearly',
-      price: '₹5,000',
+      title: 'Platinum',
+      price: '₹15,000',
       period: '/year',
       color: 'from-teal-500 to-teal-600',
       features: [
-        'All Quarterly features',
-        '24/7 support',
-        'Unlimited users',
-        '100GB storage'
+        'Advance FNO',
+        'Indicator Access',
+        'Stock Selection Algo',
+        '2x Refund+100% Loss Compensation'
       ],
-      amount: 5000
+      amount: 15000
     }
   ];
   const plansforwhatsapp = [
@@ -197,14 +199,14 @@ const Plans = () => {
                 <span className="text-gray-400 ml-1">{plan.period}</span>
               </div>
 
-              {/* <ul className="space-y-3 mb-6">
+              <ul className="space-y-3 mb-6">
                 {plan.features.map((feature, index) => (
                   <li key={index} className="flex items-center text-gray-300">
                     <CheckCircle className="w-4 h-4 mr-2 text-blue-500" />
                     {feature}
                   </li>
                 ))}
-              </ul> */}
+              </ul>
 
               <button
                 className={`w-full py-3 px-4 rounded-lg font-medium
