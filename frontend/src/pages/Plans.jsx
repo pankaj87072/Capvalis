@@ -59,7 +59,7 @@ const Plans = () => {
     {
       id: 1,
       title: 'Silver',
-      price: '₹10',
+      price: '₹4,500',
       period: '/month',
       color: 'from-green-500 to-green-600',
       features: [
@@ -67,7 +67,7 @@ const Plans = () => {
         'Basic Price Action & Candle Sticks',
          'Stock Selection Technique',
       ],
-      amount: 10
+      amount: 4500
     },
     {
       id: 2,
