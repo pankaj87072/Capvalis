@@ -19,7 +19,7 @@ const Checkout = () => {
   });
 
   const [formErrors, setFormErrors] = useState({});
-
+// console.log(location.state);
   const validateForm = () => {
     const errors = {};
     if (!formData.name) errors.name = 'Name is required';
@@ -59,15 +59,18 @@ const Checkout = () => {
 
   const handlePayment = async () => {
     if (!validateForm()) return;
+    try{
     const options = {
       key: process.env.REACT_APP_RAZORPAY_KEY_ID,
-      amount: amount,
+      key_secret: process.env.REACT_APP_SECRET_KEY_ID,
+      amount: amount*100,
       currency: "INR",
       name: "Capvalis",
       description: `${planTitle} Plan Subscription`,
       order_id: "",
       handler: (response) => {
         console.log(response);
+        alert("payment successful");
       },
       prefill: {
         name: formData.name,
@@ -81,6 +84,9 @@ const Checkout = () => {
 
     const razorpayInstance = new Razorpay(options);
     razorpayInstance.open();
+  }catch(error){
+    console.log("error occured something try again:",error);
+  }
   };
 
   return (

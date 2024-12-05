@@ -21,7 +21,7 @@ const Plans = () => {
         'Up to 10 users',
         '2GB storage'
       ],
-      amount: 49900
+      amount: 1500
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ const Plans = () => {
         'Up to 50 users',
         '10GB storage'
       ],
-      amount: 129900,
+      amount: 3000,
       popular: true
     },
     {
@@ -50,10 +50,55 @@ const Plans = () => {
         'Unlimited users',
         '100GB storage'
       ],
-      amount: 499900
+      amount: 10000
     }
   ];
 
+  const plansforCourses = [
+    {
+      id: 1,
+      title: 'Monthly',
+      price: '₹600',
+      period: '/month',
+      color: 'from-green-500 to-green-600',
+      features: [
+        'Basic features access',
+        'Email support',
+        'Up to 10 users',
+        '2GB storage'
+      ],
+      amount: 600
+    },
+    {
+      id: 2,
+      title: 'Quarterly',
+      price: '₹1,400',
+      period: '/quarter',
+      color: 'from-emerald-500 to-emerald-600',
+      features: [
+        'All Monthly features',
+        'Priority support',
+        'Up to 50 users',
+        '10GB storage'
+      ],
+      amount: 1400,
+      popular: true
+    },
+    {
+      id: 3,
+      title: 'Yearly',
+      price: '₹5,000',
+      period: '/year',
+      color: 'from-teal-500 to-teal-600',
+      features: [
+        'All Quarterly features',
+        '24/7 support',
+        'Unlimited users',
+        '100GB storage'
+      ],
+      amount: 5000
+    }
+  ];
   const plansforwhatsapp = [
     {
       id: 1,
@@ -104,7 +149,7 @@ const Plans = () => {
     ? plansforalgo 
     : servicetitle === 'WhatsApp' 
       ? plansforwhatsapp 
-      : [];
+      :servicetitle==='Courses'?plansforCourses:[];
 
   const handlePlanSelection = (plan) => {
     navigate('/checkout', {
