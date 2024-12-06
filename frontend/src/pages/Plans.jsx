@@ -60,7 +60,7 @@ const Plans = () => {
       id: 1,
       title: 'Silver',
       price: '₹4,500',
-      period: '/month',
+      period: '/year',
       color: 'from-green-500 to-green-600',
       features: [
         'Trading From Scratch(Equity)',
@@ -73,7 +73,7 @@ const Plans = () => {
       id: 2,
       title: 'Gold',
       price: '₹9,700',
-      period: '/quarter',
+      period: '/year',
       color: 'from-emerald-500 to-emerald-600',
       features: [
         'Introduction To FNO',
