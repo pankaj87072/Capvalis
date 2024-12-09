@@ -11,6 +11,10 @@ const TermsandCondition = () => {
         <div className="space-y-6 text-gray-300 text-sm">
           {/* Section 1 */}
           <section>
+         <h2 className="text-xl font-semibold mb-3 text-green-400"> Trade Name and Legal Entity</h2>
+          Capvalis.com operates under the trade name “CapValis”, which is used for branding and commercial purposes. The legal entity registered for this business is Abhiv Consultancy LLP. All contracts, agreements, and legal obligations entered into on behalf of CapValis are executed in the name of Abhiv Consultancy LLP.
+          </section>
+          <section>
             <h2 className="text-xl font-semibold mb-3 text-green-400">1. Terms and Conditions</h2>
             <p>1.1 These Terms & Conditions are legally binding between the person accessing the website or downloading the app (which expression shall include its successors and assigns).</p>
             <p>1.2 By accessing this website or downloading this application you shall be giving your consent to defined terms & conditions & will be bound by existing Information technology Act 2000/2008 & Rules defined and other law as applicable in India.</p>

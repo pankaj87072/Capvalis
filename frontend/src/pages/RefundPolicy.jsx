@@ -5,9 +5,12 @@ const RefundPolicy = () => {
     <div className="bg-gray-900 min-h-screen text-white py-12 px-4">
       <div className="max-w-4xl mx-auto bg-gray-800/60 rounded-lg p-8 border border-gray-700/50 shadow-lg">
         <h1 className="text-3xl font-bold mb-6 text-blue-400 border-b border-gray-700 pb-4">
-          Refund and Privacy Policies
+          Refund Policy
         </h1>
 
+        <section className="space-y-4 text-gray-300 text-sm mb-8">
+        <h2 className='text-xl font-semibold text-green-400'>There is no Refund Policy for any courses.</h2>
+        </section>
         <section className="space-y-4 text-gray-300 text-sm mb-8">
           <p>
             Before placing an order for items or services, please ensure you have read the details to verify they meet your needs and carefully review your order. Our policies generally prohibit issuing exchanges or refunds after an order has been placed. You agree not to evade, avoid, or circumvent these prohibitions. Refund requests are extraordinary cases and may be considered via written request. The final decision to refund rests with us. Please contact: <a href="mailto:support@capvalis.com" className="text-blue-400 hover:underline">support@capvalis.com</a>.
